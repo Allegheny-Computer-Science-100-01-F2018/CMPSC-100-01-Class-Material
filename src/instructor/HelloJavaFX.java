@@ -17,7 +17,7 @@ public class HelloJavaFX extends Application {
     //--------------------------------------------------------------------
     public void start(Stage primaryStage) {
         Text hello = new Text(50, 50, "Hello, JavaFX!");
-        Text question = new Text(120, 80, "How's it going?");
+        Text question = new Text(120, 80, "How is it going?");
 
         Group root = new Group(hello, question);
         Scene scene = new Scene(root, 300, 120, Color.LIGHTGREEN);
