@@ -29,5 +29,7 @@ public class StringExample {
     System.out.println("The second character is: " + text.charAt(1));
 
     // Now apply other String class's methods and print the results
+    // charAt, substring, toUpperCase, indexOf, replace
+    System.out.println("Index is: " + text.indexOf('p'));
   }
 }
