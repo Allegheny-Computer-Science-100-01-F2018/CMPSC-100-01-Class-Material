@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 /** Defining new identity.
@@ -16,7 +17,7 @@ public class NewIdentity {
     String job1;
     String job2;
     char letter;
-    int position = 2;
+    int position;
 
     // declare and assign Scanner object
     Scanner scan = new Scanner(System.in);
@@ -31,10 +32,17 @@ public class NewIdentity {
     System.out.println("Please enter another dream job: ");
     job2 = scan.nextLine();
 
+    // randomly select a character from the firstName
+    int length = firstName.length();
+    Random random = new Random();
+    position = random.nextInt(length);
+    char letter1 = "aeorus".charAt(random.nextInt(6));
+
     // modify user's input to create new NewIdentity
     letter = firstName.charAt(position);
-    firstName = firstName.replace(letter, 'e');
-    lastName = lastName.substring(1,5);
+    firstName = firstName.replace(letter, letter1);
+    int length1 = lastName.length();
+    lastName = lastName.substring(random.nextInt(length1), length1);
     job = job1.concat(job2);
 
     // display new NewIdentity
