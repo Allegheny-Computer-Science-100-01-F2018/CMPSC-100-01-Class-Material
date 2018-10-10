@@ -1,6 +1,12 @@
 import java.util.Scanner;
 
+/** Program to calculate monthly
+* payments for a loan */
 public class Payments {
+
+	/** Main method obtains user's input
+	* and applies the amortization formula
+	*/
 	public static void main (String [] args){
 
 		// declare variables
@@ -26,7 +32,7 @@ public class Payments {
 		double payment = loanAmount * rate * (term / (term - 1));
 		System.out.println("Payment: "+ payment);
 
-		// unrelated: demonstration of the conversion from String to int
+		// demonstration of the conversion from String to int
 		String myString = "546";
 		int myInteger = Integer.parseInt(myString);
 		System.out.println("My integer " + myInteger);
