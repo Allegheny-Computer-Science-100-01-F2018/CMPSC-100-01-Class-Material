@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 /** Program to determine whether a character a vowel.
 */
-public class IfElseDemo {
+public class IfElseDemoLogic {
 
   /** Main method uses conditional
   *  if statements to check if a given
@@ -18,19 +18,8 @@ public class IfElseDemo {
     character = input.next().charAt(0);
 
     // notice ' ' marks char
-    if (character == 'a') {
-      System.out.println ( character+" is a vowel." );
-    }
-    else if (character == 'e') {
-      System.out.println ( character+" is a vowel." );
-    }
-    else if (character == 'i') {
-      System.out.println ( character+" is a vowel." );
-    }
-    else if (character == 'o') {
-      System.out.println ( character+" is a vowel." );
-    }
-    else if (character == 'u') {
+    if (character == 'a' || character == 'e'|| character == 'i'
+        || character == 'o' || character == 'u') {
       System.out.println ( character+" is a vowel." );
     }
     else {
