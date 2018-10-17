@@ -8,7 +8,15 @@ public class GradeBookMain {
   */
   public static void main (String args[]) {
 
+    // Obtain input from the user
+    Scanner scanner = new Scanner (System.in);
+    System.out.println("Enter the course name: ");
+    String name = scanner.nextLine();
+
     GradeBook myGradeBook  = new GradeBook ();
     myGradeBook.displayMessage();
+
+    myGradeBook.setCourseName(name);
+    System.out.println("Course name: " + myGradeBook.getCourseName());
   }
 }
