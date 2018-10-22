@@ -5,6 +5,12 @@ public class GradeBook {
 
   // instance variable
   private String courseName;
+  private String courseTag;
+
+  public GradeBook (String name, String tag) {
+    courseName = name;
+    courseTag = tag;
+  }
 
   /** method to change the course name.
   */
@@ -16,6 +22,18 @@ public class GradeBook {
   */
   public String getCourseName() {
     return courseName;
+  }
+
+  /** method to change the course tag.
+  */
+  public void setCourseTag (String tag) {
+    courseTag = tag;
+  }
+
+  /** method to return the course name.
+  */
+  public String getCourseTag() {
+    return courseTag;
   }
 
   /** method to display a welcome message.
