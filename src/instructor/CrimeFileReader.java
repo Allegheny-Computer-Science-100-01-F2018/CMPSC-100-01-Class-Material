@@ -8,7 +8,7 @@ import java.util.Scanner;
 * and locate specific information.new Scanner(new File(filename))
 */
 public class CrimeFileReader {
-  private final String filename = "SacramentocrimJanuary2006.csv";
+  private final String filename = "SacramentocrimeJanuary2006.csv";
   private ArrayList<String> list;
 
   public CrimeFileReader() {
