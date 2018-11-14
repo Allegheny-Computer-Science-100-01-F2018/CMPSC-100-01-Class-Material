@@ -36,11 +36,11 @@ public class CrimeMain {
       } else if (command.equals("analyze")) {
         System.out.println("What would you like to search for?");
         String searchWord = userScanner.next();
-        //ArrayList<String> searchList = reader.find(searchWord);
-        //analyzer.findDistricts(searchList);
-        System.out.println(searchWord+" occurred "+analyzer.getCount()+" times");
-        //System.out.println(searchWord+" occurred in "+analyzer.getDistricts().size()
-        //                  +" districts, including: \n"+analyzer.getDistricts());
+        ArrayList<String> searchList = reader.find(searchWord);
+        analyzer.findDistricts(searchList);
+        System.out.println(searchWord + " occurred "+analyzer.getCount() + " times");
+        System.out.println(searchWord + " occurred in " + analyzer.getDistricts().size()
+                          +" districts, including: \n" + analyzer.getDistricts());
       } else if (command.equals("quit")) {
         System.out.println("Thank you for using the Crime Data Manager.");
         break;
