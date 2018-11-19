@@ -14,7 +14,7 @@ public class SwitchDemoMain {
 		System.out.print ( left +" "+ operator +" "+ right +" = ");
 
 		Calculator calc = new Calculator(0);
-    calc.calculate(left, right, operator);
+    calc.calculate(left, operator, right);
 		double result = calc.getResult();
 
 		DecimalFormat fmt = new DecimalFormat("0.##");
