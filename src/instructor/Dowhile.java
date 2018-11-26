@@ -4,19 +4,19 @@
 public class Dowhile {
   public static void main ( String args[] ) {
 
-    int num = 10;
+    int num = 1;
     while(num < 10) {
       System.out.println("While Loop: " + num + " ");
       num++;
     }
 
-    num = 10;
+    num = 1;
     do {
-      System.out.print("Do while loop: " + num + " ");
+      System.out.println("Do while loop: " + num + " ");
       num++;
     }
     while(num < 10);
-    
+
     System.out.println();
    }
 }
