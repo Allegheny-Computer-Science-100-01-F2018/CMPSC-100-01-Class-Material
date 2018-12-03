@@ -23,7 +23,7 @@ public class JukeBox extends Application {
   private ChoiceBox<String> choice;
   private AudioClip[] tunes;
   private AudioClip current;
-  private Button playButton, stopButton;
+  private Button playButton, stopButton, drawButton;
 
   /** Presents an interface that allows the user to select and play
   * a tune from a drop down box.
@@ -53,14 +53,16 @@ public class JukeBox extends Application {
 
     playButton = new Button("Play");
     stopButton = new Button("Stop");
+    drawButton = new Button("Draw");
 
-    HBox buttons = new HBox(playButton, stopButton);
+    HBox buttons = new HBox(playButton, stopButton, drawButton);
     buttons.setSpacing(10);
     buttons.setPadding(new Insets(15, 0, 0, 0));
     buttons.setAlignment(Pos.CENTER);
 
     playButton.setOnAction(this::processButtonPush);
     stopButton.setOnAction(this::processButtonPush);
+    drawButton.setOnAction(this::processButtonPush);
 
     VBox root = new VBox(label, choice, buttons);
     root.setPadding(new Insets(15, 15, 15, 25));
@@ -90,8 +92,10 @@ public class JukeBox extends Application {
 
     if (event.getSource() == playButton) {
       current.play();
-    }
-    else {
+    } else if (event.getSource() == drawButton) {
+      Drawing drawing = new Drawing();
+      drawing.draw();
+    } else {
       current.stop();
     }
   }
